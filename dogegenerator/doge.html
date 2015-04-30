@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Document</title>
+    <style id="jsbin-css">
+        body {
+            background-color: #afafaf
+        }
+        #dogeButt {
+            text-align: center
+        }
+        #navbar {
+            position: fixed;
+            bottom:10px;
+            left:50%;
+            margin-left:-350px;
+        }
+        ul {
+            list-style-type: none;
+            position: fixed;
+            margin: -10px;
+        }
+        li {
+            display: inline;
+            border-style: outset;
+            border: px;
+            font-family: Futura, Tahoma, sans-serif;
+            color: #afffff;
+            padding: 5px;
+            border-radius: 5px 5px;
+            background-color: #9999ff
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="../intropage/intro.html">About class</a>
+            </li>
+            <li><a href="../aboutme/aboutme.html">About me</a>
+            </li>
+            <li><a href="../calculator/calc.html">Calculator</a>
+            </li>
+            <li><a href="../dogegenerator/doge.html">Doge generator</a>
+            </li>
+            <li><a href="../seatgenerator/seatgen.html">Seat Generator</a>
+            </li>
+            <li><a href="../vindpage/vind.html">Vindinium</a>
+            </li>
+        </ul>
+    </div>
+
+    <a href="../seatgenerator/index.html"></a>
+
+    <div id="dogeButt">
+
+
+        <input type="button" value="DOGE" id="Dogs" />
+        <div id="here"></div>
+
+    </div>
+    <span id="dogGen"></span>
+
+
+
+    <script id="jsbin-javascript">
+        var dog = document.getElementById("Dogs");
+        var cat = document.getElementById("Cats");
+        dog.addEventListener("click", function() {
+            var rand = Math.floor(Math.random() * 10);
+            var dog1 = document.createElement("img");
+            dog1.setAttribute("src", 'http://scontent-a.cdninstagram.com/hphotos-xap1/t51.2885-15/10175211_653765801361427_1978231186_a.jpg');
+            if(rand === 1) {
+                document.getElementById("here").appendChild(dog1);
+            }
+            var dog2 = document.createElement("img");
+            dog2.setAttribute("src", 'http://dogeforall.biz/images/loader_loaded.png');
+            if(rand === 2) {
+                document.getElementById("here").appendChild(dog2);
+            }
+            var dog3 = document.createElement("img");
+            dog3.setAttribute("src", 'http://dogeforall.biz/images/loader_loaded.png');
+            if(rand === 3) {
+                document.getElementById("here").appendChild(dog3);
+            }
+            var dog4 = document.createElement("img");
+            dog4.setAttribute("src", 'http://dogeforall.biz/images/loader_loaded.png');
+            if(rand === 4) {
+                document.getElementById("here").appendChild(dog4);
+            }
+            var dog5 = document.createElement("img");
+            dog5.setAttribute("src", 'http://dogeforall.biz/images/loader_loaded.png');
+            if(rand === 5) {
+                document.getElementById("here").appendChild(dog5);
+            }
+            var dog6 = document.createElement("img");
+            dog6.setAttribute("src", 'http://dogeforall.biz/images/loader_loaded.png');
+            if(rand === 6) {
+                document.getElementById("here").appendChild(dog6);
+            }
+            var dog7 = document.createElement("img");
+            dog7.setAttribute("src", 'http://dogeforall.biz/images/loader_loaded.png');
+            if(rand === 7) {
+                document.getElementById("here").appendChild(dog7);
+            }
+            var dog8 = document.createElement("img");
+            dog8.setAttribute("src", 'http://dogeforall.biz/images/loader_loaded.png');
+            if(rand === 8) {
+                document.getElementById("here").appendChild(dog8);
+            }
+            var dog9 = document.createElement("img");
+            dog9.setAttribute("src", 'http://dogeforall.biz/images/loader_loaded.png');
+            if(rand === 9) {
+                document.getElementById("here").appendChild(dog9);
+            }
+            var dog10 = document.createElement("img");
+            dog10.setAttribute("src", 'http://dogeforall.biz/images/loader_loaded.png');
+            if(rand === 10) {
+                document.getElementById("here").appendChild(dog10);
+            }
+        }, true);
+    </script>
+</body>
+
+</html>

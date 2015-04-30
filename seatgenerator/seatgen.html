@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Document</title>
+    <style id="jsbin-css">
+        #navbar {
+            position: fixed;
+            bottom:10px;
+            left:50%;
+            margin-left:-350px;
+        }
+        ul {
+            list-style-type: none;
+            position: fixed;
+            margin: -10px;
+        }
+        li {
+            display: inline;
+            border-style: outset;
+            border: px;
+            font-family: Futura, Tahoma, sans-serif;
+            color: #afffff;
+            padding: 5px;
+            border-radius: 5px 5px;
+            background-color: #9999ff
+        }
+        body {
+            background-color: #afafaf;
+        }
+        .desk {
+            display: inline-block;
+            vertical-align:top;
+        }
+        p {
+            margin-right:auto;
+        }
+        .wrapper {
+            text-align:center;
+        }
+        #namegen {
+            text-align: center;
+            background-color: #373737;
+            margin-left: auto;
+            margin-right: auto;
+            width: 700px;
+            height: 165px;
+            line-height: 33px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            box-shadow: rgba(0, 0, 0, .3) 5px 5px;
+        }
+        #textl_cont {
+            text-align:center
+        }
+        #desk1 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk2 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk3 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk4 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk5 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk6 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk7 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk8 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk9 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk10 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk11 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk12 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk13 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk14 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px
+        }
+        #desk15 {
+            border-style: outset;
+            border-color: #C2C2A3;
+            background-color: #C2C2A3;
+            border-radius: 15px;
+            width: 140px;
+            text-align: center;
+            height: 50px;
+        }
+        #Title {
+            margin-top: auto;
+            margin-bottom: auto;
+            color: #ffffff
+        }
+    </style>
+</head>
+
+<div id="navbar">
+    <ul>
+        <li><a href="../intropage/intro.html">About class</a>
+        </li>
+        <li><a href="../aboutme/aboutme.html">About me</a>
+        </li>
+        <li><a href="../calculator/calc.html">Calculator</a>
+        </li>
+        <li><a href="../dogegenerator/doge.html">Doge generator</a>
+        </li>
+        <li><a href="../seatgenerator/seatgen.html">Seat Generator</a>
+        </li>
+        <li><a href="../vindpage/vind.html">Vindinium</a>
+        </li>
+    </ul>
+</div>
+
+<body>
+
+    <div id="namegen">
+
+        <p id="Title">
+            Room Scrambler
+
+        </p>
+        <form id="frm1">
+            <input class="grabber" type="text" name="Name1" style="width:50px;" id="Name1">
+
+            <input class="grabber" type="text" name="Name2" style="width:50px;" id="Name2">
+
+            <input class="grabber" type="text" name="Name3" style="width:50px;" id="Name3">
+
+            <input class="grabber" type="text" name="Name4" style="width:50px;" id="Name4">
+
+            <input class="grabber" type="text" name="Name5" style="width:50px;" id="Name5">
+
+            <input class="grabber" type="text" name="Name6" style="width:50px;" id="Name6">
+
+            <input class="grabber" type="text" name="Name7" style="width:50px;" id="Name7">
+
+            <input class="grabber" type="text" name="Name8" style="width:50px;" id="Name8">
+
+            <input class="grabber" type="text" name="Name9" style="width:50px;" id="Name9">
+
+            <input class="grabber" type="text" name="Name10" style="width:50px;" id="Name10">
+
+            <input class="grabber" type="text" name="Name11" style="width:50px;" id="Name11">
+
+            <input class="grabber" type="text" name="Name12" style="width:50px;" id="Name12">
+
+            <input class="grabber" type="text" name="Name13" style="width:50px;" id="Name13">
+
+            <input class="grabber" type="text" name="Name14" style="width:50px;" id="Name14">
+
+            <input class="grabber" type="text" name="Name15" style="width:50px;" id="Name15">
+
+            <input class="grabber" type="text" name="Name16" style="width:50px;" id="Name16">
+
+            <input class="grabber" type="text" name="Name17" style="width:50px;" id="Name17">
+
+            <input class="grabber" type="text" name="Name18" style="width:50px;" id="Name18">
+
+            <input class="grabber" type="text" name="Name19" style="width:50px;" id="Name19">
+
+            <input class="grabber" type="text" name="Name20" style="width:50px;" id="Name20">
+
+            <input class="grabber" type="text" name="Name21" style="width:50px;" id="Name21">
+
+            <input class="grabber" type="text" name="Name22" style="width:50px;" id="Name22">
+
+            <input class="grabber" type="text" name="Name23" style="width:50px;" id="Name23">
+
+            <input class="grabber" type="text" name="Name24" style="width:50px;" id="Name24">
+
+            <input class="grabber" type="text" name="Name25" style="width:50px;" id="Name25">
+
+            <input class="grabber" type="text" name="Name26" style="width:50px;" id="Name26">
+
+            <input class="grabber" type="text" name="Name27" style="width:50px;" id="Name27">
+
+            <input class="grabber" type="text" name="Name28" style="width:50px;" id="Name28">
+
+            <input class="grabber" type="text" name="Name29" style="width:50px;" id="Name29">
+
+            <input class="grabber" type="text" name="Name30" style="width:50px;" id="Name30">
+        </form>
+
+        <input type="button" value="Generate" id="genButton">
+
+    </div>
+
+    <form id="frm2">
+        <p>Seating chart:
+            <div class="wrapper">
+                <div id="desk1" class="desk">
+                    <div id="product0"> <span id="person0"></span> 
+                    </div>
+                    <div id="product1"> <span id="person1"></span> 
+                    </div>
+                </div>
+
+                <div id="desk2" class="desk">
+                    <div id="product2"> <span id="person2"></span> 
+                    </div>
+                    <div id="product3"> <span id="person3"></span> 
+                    </div>
+                </div>
+
+                <div id="desk3" class="desk">
+                    <div id="product4"> <span id="person4"></span> 
+                    </div>
+                    <div id="product5"> <span id="person5"></span> 
+                    </div>
+                </div>
+
+                <div id="desk4" class="desk">
+                    <div id="product6"> <span id="person6"></span> 
+                    </div>
+                    <div id="product7"> <span id="person7"></span> 
+                    </div>
+                </div>
+
+                <div id="desk5" class="desk">
+                    <div id="product8"> <span id="person8"></span> 
+                    </div>
+                    <div id="product9"> <span id="person9"></span> 
+                    </div>
+                </div>
+
+                <div id="desk6" class="desk">
+                    <div id="product10"> <span id="person10"></span> 
+                    </div>
+                    <div id="product11"> <span id="person11"></span> 
+                    </div>
+                </div>
+
+                <div id="desk7" class="desk">
+                    <div id="product12"> <span id="person12"></span> 
+                    </div>
+                    <div id="product13"> <span id="person13"></span> 
+                    </div>
+                </div>
+
+                <div id="desk8" class="desk">
+                    <div id="product14"> <span id="person14"></span> 
+                    </div>
+                    <div id="product15"> <span id="person15"></span> 
+                    </div>
+                </div>
+
+                <div id="desk9" class="desk">
+                    <div id="product16"> <span id="person16"></span> 
+                    </div>
+                    <div id="product17"> <span id="person17"></span> 
+                    </div>
+                </div>
+
+                <div id="desk10" class="desk">
+                    <div id="product18"> <span id="person18"></span> 
+                    </div>
+                    <div id="product19"> <span id="person19"></span> 
+                    </div>
+                </div>
+
+                <div id="desk11" class="desk">
+                    <div id="product20"> <span id="person20"></span> 
+                    </div>
+                    <div id="product21"> <span id="person21"></span> 
+                    </div>
+                </div>
+
+                <div id="desk12" class="desk">
+                    <div id="product22"> <span id="person22"></span> 
+                    </div>
+                    <div id="product23"> <span id="person23"></span> 
+                    </div>
+                </div>
+
+                <div id="desk13" class="desk">
+                    <div id="product24"> <span id="person24"></span> 
+                    </div>
+                    <div id="product25"> <span id="person25"></span> 
+                    </div>
+                </div>
+
+                <div id="desk14" class="desk">
+                    <div id="product26"> <span id="person26"></span> 
+                    </div>
+                    <div id="product27"> <span id="person27"></span> 
+                    </div>
+                </div>
+
+                <div id="desk15" class="desk">
+                    <div id="product28"> <span id="person28"></span> 
+                    </div>
+                    <div id="product29"> <span id="person29"></span> 
+                    </div>
+                </div>
+            </div>
+
+    </form>
+
+    </p>
+    </div>
+
+    <script id="jsbin-javascript">
+        var genButton = document.getElementById("genButton");
+        var myForm = document.getElementById("frm1");
+        var myForm2 = document.getElementById("frm2");
+        var grabber = document.getElementById("grabber");
+        var names = [];
+        genButton.addEventListener("click", doTheStuff, true);
+         // function() {
+         // if  (document.getElementById("DropdownMenu1").value == "rScramb"){
+
+        function doTheStuff() {
+            grabTheNames();
+            shuffle();
+            displayNames();
+        }
+
+        function displayNames() {
+            for(var i = 0; i < names.length; i++) {
+                document.getElementById("product" + i).innerHTML = names[i];
+            }
+        }
+
+        function grabTheNames() {
+            for(var i = 0; i < myForm.elements.length; i++) {
+                names[i] = myForm.elements[i].value;
+            }
+        }
+
+        function shuffle() {
+            var temp, ran1, ran2;
+            for(var i = 0; i < 1000; i++) {
+                ran1 = Math.floor(Math.random() * 30);
+                do {
+                    ran2 = Math.floor(Math.random() * 30);
+                }
+                while (ran1 === ran2); {
+                    ran2 = Math.floor(Math.random() * 30);
+                }
+                temp = names[ran1];
+                names[ran1] = names[ran2];
+                names[ran2] = temp;
+            }
+            console.log(names);
+        }
+         //var currentIndex = myForm.elements.length, temporaryValue, randomIndex ;
+         //while (0 !== currentIndex) {
+         //randomIndex = Math.floor(Math.random() * currentIndex);
+         //currentIndex -= 1;
+         //temporaryValue = myForm.elements[currentIndex];
+         //myForm.elements[currentIndex] = myForm.elements[randomIndex];
+         //myForm.elements[randomIndex] = temporaryValue;
+         //}
+         //return myForm.elements;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="calc.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="../intropage/intro.html">About class</a>
+            </li>
+            <li><a href="../aboutme/aboutme.html">About me</a>
+            </li>
+            <li><a href="../calculator/calc.html">Calculator</a>
+            </li>
+            <li><a href="../dogegenerator/doge.html">Doge generator</a>
+            </li>
+            <li><a href="../seatgenerator/seatgen.html">Seat Generator</a>
+            </li>
+            <li><a href="../vindpage/vind.html">Vindinium</a>
+            </li>
+        </ul>
+    </div>
+    <div id="calc">
+        <p>Calculator</p>
+        <input type="text" name="Number1" style="width:50px;" id="Number1">
+        <select id="DropdownMenu1">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">*</option>
+            <option value="÷">/</option>
+            <option value="&">&</option>
+            <option value="^">^</option>
+            <option value="mod">mod</option>
+        </select>
+        <input type="text" name="Number2" style="width:50px;" id="Number2">
+
+
+        <input type="button" value="Calculate" id="submitButton" />
+
+        <div id="SCT">
+
+            <div id="S">
+                <input type="text" name="Sqrt" style="width:20px;" id="√">
+
+
+                <input type="button" value="Sqrt" id="submitButton√" />
+
+                <input type="text" name="Cos" style="width:20px;" id="Cos">
+
+                <input type="button" value="Cos" id="submitButtonCos" />
+
+
+                <input type="text" name="Tan" style="width:20px;" id="Tan">
+
+                <input type="button" value="Tan" id="submitButtonTan" />
+
+
+                <input type="text" name="Sin" style="width:20px;" id="Sin">
+
+                <input type="button" value="Sin" id="submitButtonSin" />
+            </div>
+            <p>The answer is: <span id="Answer"></span>
+            </p>
+        </div>
+
+
+        <script src="calc.js"></script>
+
+</body>
+
+</html>

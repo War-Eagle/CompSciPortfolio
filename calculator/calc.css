@@ -1,0 +1,68 @@
+
+body {
+
+    background-color: #afafaf;
+
+}
+
+#calc {
+
+    text-align:center;
+
+    border-top-left-radius: 15px;
+
+    border-top-right-radius: 15px;
+
+    background-color: #373737;
+
+    box-shadow: rgba(0, 0, 0, .3) 5px 5px;
+
+}
+
+#navbar {
+
+    position: fixed;
+
+    bottom:10px;
+
+    left:50%;
+
+    margin-left:-350px;
+
+}
+
+ul {
+
+    list-style-type: none;
+
+    position: fixed;
+
+    margin: -10px;
+
+}
+
+li {
+
+    display: inline;
+
+    border-style: outset;
+
+    border: px;
+
+    font-family: Futura, Tahoma, sans-serif;
+
+    color: #afffff;
+
+    padding: 5px;
+
+    border-radius: 5px 5px;
+
+    background-color: #9999ff
+
+}
+
+p {
+
+    color: white
+
+}

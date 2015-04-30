@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="vind.css" />
+    <title>Result</title>
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="navbar">
+            <ul>
+                <li><a href="../intropage/intro.html">About class</a>
+                </li>
+                <li><a href="../aboutme/aboutme.html">About me</a>
+                </li>
+                <li><a href="../calculator/calc.html">Calculator</a>
+                </li>
+                <li><a href="../dogegenerator/doge.html">Doge generator</a>
+                </li>
+                <li><a href="../seatgenerator/seatgen.html">Seat Generator</a>
+                </li>
+                <li><a href="../vindpage/vind.html">Vindinium</a>
+                </li>
+            </ul>
+        </div>
+        <h2>Vindinium</h2>
+    </div>
+
+    <img src="http://stratosprovatopoulos.com/wp-content/uploads/2014/02/Vindinium.jpg">
+    <pre id="words">        
+          The last project that we did in Computer Science class, was to make
+      an "AI", which would then go connect to Vindinium.org, and the bots
+      would battle. The goal of the game is to get the most gold. There
+      are two ways to get gold, take mines, or kill other players and
+      take their mines. For every turn that passes, the program runs your
+      code.
+    
+      
+          This is my bot, War Eagle. Although it is pretty
+      simplistic, I was not actually able to make any complex bot any better.
+      This just goes to show that sometimes a more simple bot
+      can do better than more complex ones. (Screenshot on the right)
+      
+      
+          As for what it does, it creates several arrays, each containing 
+      the locations of enemy things. After it declares those, it goes 
+      into a "task system, where it determines what to do. For instance, 
+      If it's health is below 25, it uses a for loop to determine where that
+      is, and it goes there. The task "mines" is active when the bot's
+      gold is below 45, and it does as you would expect, it finds mines and
+      captures them. The final task, "warEagle" is not as self explanitory. It
+      finds the nearest bot, and attacks it, although it is simple, it does
+      work very well.
+     </pre>
+    <pre><code>
+var Bot = require('bot');
+var PF = require('pathfinding');
+//var bot = new Bot('lr0com1v', 'arena', 'http://24.6.28.217:9000');
+var bot = new Bot('yvsqm7ym', 'arena', 'http://vindinium.org');
+var Promise = require('bluebird');
+Bot.prototype.botBrain = function() {
+    return new Promise(function(resolve, reject) {
+        _this = bot;
+        //Puts enemy bots and mines into their respective array//
+        var bots = []
+        if(bot.yourBot.id != 1) bots.push(bot.bot1);
+        if(bot.yourBot.id != 2) bots.push(bot.bot2);
+        if(bot.yourBot.id != 3) bots.push(bot.bot3);
+        if(bot.yourBot.id != 4) bots.push(bot.bot4);
+        var lsMines = [bot.freeMines, bot.bot1mines, bot.bot2mines, bot.bot3mines, bot.bot4mines];
+        var mines = bot.freeMines.concat(lsMines[bots[0].id], lsMines[bots[1].id], lsMines[bots[2].id]);
+        //sets tasks and your bot's current location//
+        var task;
+        var myDir = "stay";
+        var CurLoc = [bot.yourBot.pos.x, bot.yourBot.pos.y];
+        //Tells the bot what to do//
+        if(bot.yourBot.life < 25) task = "Flee";
+        else if(bot.data.game.heroes[bot.yourBot.id - 1].gold < 45) task = "mines";
+        else task = "warEagle";
+        console.log(task)
+        //Finds the closest mines and goes to them//
+        if(task === "mines") {
+            var closestMine = mines[0];
+            for(i = 0; i < mines.length; i++) {
+                if(bot.findDistance(CurLoc, closestMine) > bot.findDistance(CurLoc, mines[i])) {
+                    closestMine = mines[i];
+                }
+            }
+            myDir = bot.findPath(CurLoc, closestMine);
+        }
+        //If the bots health is below 25, it finds and goes to the closest tavern//
+        if(task === "Flee") {
+            var closestTav = bot.taverns[0];
+            for(i = 0; i < bot.taverns.length; i++) {
+                if(bot.findDistance(CurLoc, closestTav) > bot.findDistance(CurLoc, bot.taverns[i])) {
+                    closestTav = bot.taverns[i];
+                }
+            }
+            myDir = bot.findPath(CurLoc, closestTav);
+        }
+        //Finds and kills the closest enemy bot//
+        if(task === "warEagle") {
+            var closestTar = [bots[0].pos.x, bots[0].pos.y];
+            console.log(closestTar)
+            for(i = 0; i < bots.length; i++) {
+                if(bot.findDistance(CurLoc, closestTar) > bot.findDistance(CurLoc, [bots[i].pos.x, bots[i].pos.y])) {
+                    closestTar = [bots[i].pos.x, bots[i].pos.y];
+                }
+            }
+            myDir = bot.findPath(CurLoc, closestTar);
+        }
+        bot.goDir = myDir;
+        resolve();
+    });
+}
+bot.runGame();
+
+</code></pre>
+</body>
+
+</html>
